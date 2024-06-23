@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Spinner</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Spinner</h1>
+        <form action="/spin" method="POST">
+            <textarea name="text" rows="10" cols="50" placeholder="Enter your text here.."></textarea><br>
+            <button type="submit">Spin Text</button>
+        </form>
+        <% if (typeof spunText !== 'undefined') { %>
+            <h2>Spun Text</h2>
+            <p><%= spunText %></p>
+        <% } %>
+    </div>
+</body>
+</html>
